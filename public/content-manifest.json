@@ -1,0 +1,39 @@
+{
+  "version": "2025-11-02T20:27:29.544Z",
+  "worlds": [
+    {
+      "id": "world-moi",
+      "slug": "moi-et-le-monde",
+      "title": "Moi et le monde",
+      "order": 1,
+      "level": "A0-A1",
+      "cover": "/assets/images/world-moi.webp"
+    }
+  ],
+  "lessons": [
+    {
+      "id": "lesson-intro",
+      "worldId": "world-moi",
+      "slug": "intro",
+      "title": "Le miroir",
+      "order": 1,
+      "isCore": true,
+      "difficulty": 1,
+      "cover": "/assets/images/lesson-intro.webp"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene-001",
+      "type": "immersion",
+      "lessonId": "lesson-intro",
+      "order": 1,
+      "hash": "sha256:b80fd36328314f9fc66c0be1c999c53096c0529355a2ae191a051a9258b7ede2",
+      "assets": [
+        "/assets/lottie/mirror.json",
+        "/assets/audio/intro-sprite.mp3"
+      ]
+    }
+  ],
+  "assets": {}
+}

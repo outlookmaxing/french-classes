@@ -1,0 +1,25 @@
+{
+  "id": "scene-001",
+  "type": "immersion",
+  "order": 1,
+  "lessonId": "lesson-intro",
+  "title": "Le miroir",
+  "media": {
+    "lottie": "/assets/lottie/mirror.json",
+    "audioSprite": "/assets/audio/intro-sprite.mp3",
+    "cues": [
+      { "t": [0, 2.5], "text": "Bonjour! Je m'appelle Marie." },
+      { "t": [3, 5.5], "text": "Et toi, comment t'appelles-tu?" },
+      { "t": [6, 9], "text": "Je suis content de te rencontrer!" }
+    ]
+  },
+  "hints": [
+    { "icon": "💭", "hint": "Écoute et répète après l'audio" },
+    { "icon": "🪞", "hint": "Regarde-toi dans le miroir" }
+  ],
+  "checks": [
+    { "kind": "audio", "target": "intro" },
+    { "kind": "gesture", "target": "wave" }
+  ],
+  "successFX": "watercolor-splash"
+}

@@ -1,0 +1,10 @@
+{
+  "id": "lesson-intro",
+  "worldId": "world-moi",
+  "slug": "intro",
+  "title": "Le miroir",
+  "order": 1,
+  "isCore": true,
+  "difficulty": 1,
+  "cover": "/assets/images/lesson-intro.webp"
+}

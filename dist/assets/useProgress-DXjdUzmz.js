@@ -1,0 +1,1 @@
+import{g as t,s as n}from"./index-zZt3oOrw.js";async function o({sceneId:s,stars:r}){const e=await t();if(!e)throw new Error("User not authenticated");await n.from("user_progress").upsert({user_id:e.id,scene_id:s,stars:r,last_seen_at:new Date().toISOString()},{onConflict:"user_id,scene_id"})}export{o as saveSceneProgress};
