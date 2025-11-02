@@ -11,7 +11,7 @@
       - `order` (integer)
       - `color_palette` (jsonb) - watercolor colors for this world
       - `created_at` (timestamptz)
-
+    
     - `scenes` - Individual learning scenes/exercises
       - `id` (uuid, primary key)
       - `world_id` (uuid, foreign key)
@@ -22,7 +22,7 @@
       - `content_spec` (jsonb) - scene configuration
       - `is_core` (boolean) - core A0 scenes
       - `created_at` (timestamptz)
-
+    
     - `assets` - Media assets (images, audio, animations)
       - `id` (uuid, primary key)
       - `kind` (text) - image, audio, lottie, video
@@ -30,7 +30,7 @@
       - `alt_text` (text)
       - `metadata` (jsonb)
       - `created_at` (timestamptz)
-
+    
     - `culture_cards` - Etymology and cultural facts
       - `id` (uuid, primary key)
       - `word_or_phrase` (text)
@@ -39,7 +39,7 @@
       - `related_scene_id` (uuid, nullable)
       - `illustration_asset_id` (uuid, nullable)
       - `created_at` (timestamptz)
-
+    
     - `user_profiles` - User settings and preferences
       - `id` (uuid, primary key)
       - `email` (text, nullable)
@@ -48,7 +48,7 @@
       - `learning_goal` (text)
       - `preferred_time` (text)
       - `created_at` (timestamptz)
-
+    
     - `user_progress` - Track learning progress
       - `id` (uuid, primary key)
       - `user_id` (uuid, foreign key)
@@ -59,7 +59,7 @@
       - `srs_bucket` (integer, default 0) - spaced repetition bucket
       - `completed_at` (timestamptz, nullable)
       - `created_at` (timestamptz)
-
+    
     - `user_events` - Learning analytics
       - `id` (uuid, primary key)
       - `user_id` (uuid, foreign key)

@@ -1,5 +1,5 @@
 {
-  "version": "2025-11-02T20:27:29.544Z",
+  "version": "2025-11-02T20:53:31.864Z",
   "worlds": [
     {
       "id": "world-moi",
@@ -35,5 +35,8 @@
       ]
     }
   ],
-  "assets": {}
+  "assets": {
+    "/assets/lottie/mirror.json": "sha256:4a3b7480d9b277c58e928bade534e97890a3c15b715880c7baf0f7d659a7e559",
+    "/assets/audio/intro-sprite.mp3": "sha256:1dc7b9fa28046ffad520adb950eab33e867c8321fbeac2d3e1e2dced221e9ce9"
+  }
 }
