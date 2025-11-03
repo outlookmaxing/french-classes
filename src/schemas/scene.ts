@@ -1,6 +1,15 @@
 import { z } from "zod";
 
-export const SceneType = z.enum(["immersion", "visual-recall", "audio-choice"]);
+export const SceneType = z.enum([
+  "immersion",
+  "visual-recall",
+  "audio-choice",
+  "echo-auditif",
+  "micro-dialogue",
+  "culture-minute",
+  "erreur-vivante",
+  "association-sensorielle"
+]);
 
 const base = z.object({
   id: z.string().min(1),
@@ -51,11 +60,102 @@ export const AudioChoiceScene = base.extend({
   onWrong: z.object({ fx: z.string().optional() }).optional()
 });
 
+// Echo Auditif: слушаем без текста, угадываем контекст
+export const EchoAuditifScene = base.extend({
+  type: z.literal("echo-auditif"),
+  audio: z.string().min(1),
+  description: z.string().optional(),
+  emotionTags: z.array(z.string()).optional(),
+  contextOptions: z.array(z.object({
+    text: z.string(),
+    emotion: z.string().optional(),
+    correct: z.boolean()
+  })).min(2)
+});
+
+// Micro-Dialogue: живая ситуация с репликами
+export const MicroDialogueScene = base.extend({
+  type: z.literal("micro-dialogue"),
+  situation: z.string(),
+  image: z.string().optional(),
+  audio: z.string().optional(),
+  dialogue: z.array(z.object({
+    speaker: z.string(),
+    text: z.string(),
+    translation: z.string().optional(),
+    audio: z.string().optional()
+  })),
+  userPrompt: z.string(),
+  responses: z.array(z.object({
+    text: z.string(),
+    translation: z.string().optional(),
+    correct: z.boolean(),
+    feedback: z.string().optional()
+  }))
+});
+
+// Culture Minute: история слова, факт, этимология
+export const CultureMinuteScene = base.extend({
+  type: z.literal("culture-minute"),
+  word: z.string(),
+  etymology: z.string(),
+  funFact: z.string(),
+  image: z.string().optional(),
+  audio: z.string().optional(),
+  examples: z.array(z.object({
+    text: z.string(),
+    translation: z.string().optional()
+  })).optional()
+});
+
+// Erreur Vivante: находим типичные ошибки
+export const ErreurVivanteScene = base.extend({
+  type: z.literal("erreur-vivante"),
+  incorrectPhrase: z.string(),
+  correctPhrase: z.string(),
+  explanation: z.string(),
+  translation: z.string().optional(),
+  image: z.string().optional(),
+  audio: z.string().optional(),
+  similarMistakes: z.array(z.object({
+    incorrect: z.string(),
+    correct: z.string()
+  })).optional()
+});
+
+// Association Sensorielle: связываем образы, запахи, звуки
+export const AssociationSensorielleScene = base.extend({
+  type: z.literal("association-sensorielle"),
+  targetWord: z.string(),
+  translation: z.string().optional(),
+  sensoryElements: z.array(z.object({
+    type: z.enum(["image", "sound", "color", "emotion"]),
+    value: z.string(),
+    label: z.string().optional()
+  })),
+  associations: z.array(z.object({
+    word: z.string(),
+    related: z.boolean()
+  }))
+});
+
 export const AnyScene = z.discriminatedUnion("type", [
-  ImmersionScene, VisualRecallScene, AudioChoiceScene
+  ImmersionScene,
+  VisualRecallScene,
+  AudioChoiceScene,
+  EchoAuditifScene,
+  MicroDialogueScene,
+  CultureMinuteScene,
+  ErreurVivanteScene,
+  AssociationSensorielleScene
 ]);
 
 export type TImmersionScene = z.infer<typeof ImmersionScene>;
 export type TVisualRecallScene = z.infer<typeof VisualRecallScene>;
 export type TAudioChoiceScene = z.infer<typeof AudioChoiceScene>;
+export type TEchoAuditifScene = z.infer<typeof EchoAuditifScene>;
+export type TMicroDialogueScene = z.infer<typeof MicroDialogueScene>;
+export type TCultureMinuteScene = z.infer<typeof CultureMinuteScene>;
+export type TErreurVivanteScene = z.infer<typeof ErreurVivanteScene>;
+export type TAssociationSensorielleScene = z.infer<typeof AssociationSensorielleScene>;
 export type TAnyScene = z.infer<typeof AnyScene>;

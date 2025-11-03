@@ -1,0 +1,10 @@
+{
+  "id": "lesson-bonjour",
+  "worldId": "world-moi",
+  "slug": "bonjour",
+  "title": "Bonjour!",
+  "order": 2,
+  "isCore": true,
+  "difficulty": 1,
+  "cover": "/assets/images/lesson-bonjour.webp"
+}

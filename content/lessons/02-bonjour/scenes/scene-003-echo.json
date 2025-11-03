@@ -1,0 +1,32 @@
+{
+  "id": "scene-bonjour-echo",
+  "type": "echo-auditif",
+  "order": 3,
+  "lessonId": "lesson-bonjour",
+  "title": "Sons du matin",
+  "description": "Fermez les yeux. Ecoutez. Ou etes-vous?",
+  "audio": "/assets/audio/cafe-morning.mp3",
+  "emotionTags": ["calme", "chaleur", "matin"],
+  "contextOptions": [
+    {
+      "text": "Dans un cafe parisien le matin",
+      "emotion": "matin",
+      "correct": true
+    },
+    {
+      "text": "Dans le metro aux heures de pointe",
+      "emotion": "stress",
+      "correct": false
+    },
+    {
+      "text": "Dans un parc sous la pluie",
+      "emotion": "pluie",
+      "correct": false
+    },
+    {
+      "text": "A la maison le soir",
+      "emotion": "soir",
+      "correct": false
+    }
+  ]
+}

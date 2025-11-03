@@ -52,7 +52,7 @@ export function SceneAudioChoice({ scene, onComplete, onBack, nextAssets = [] }:
     triggerSplash(isCorrect ? 'success' : 'error');
 
     // Save progress
-    const savePromise = saveSceneProgress({
+    saveSceneProgress({
       sceneId: scene.id,
       stars: isCorrect ? 3 : 1
     }).catch(error => console.error('Failed to save progress:', error));

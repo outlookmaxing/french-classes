@@ -1,0 +1,10 @@
+{
+  "id": "lesson-emotions",
+  "worldId": "world-moi",
+  "slug": "emotions",
+  "title": "Les emotions",
+  "order": 3,
+  "isCore": true,
+  "difficulty": 2,
+  "cover": "/assets/images/lesson-emotions.webp"
+}

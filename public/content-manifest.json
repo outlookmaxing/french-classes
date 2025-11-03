@@ -1,5 +1,5 @@
 {
-  "version": "2025-11-02T20:53:31.864Z",
+  "version": "2025-11-03T01:32:18.342Z",
   "worlds": [
     {
       "id": "world-moi",
@@ -20,6 +20,26 @@
       "isCore": true,
       "difficulty": 1,
       "cover": "/assets/images/lesson-intro.webp"
+    },
+    {
+      "id": "lesson-bonjour",
+      "worldId": "world-moi",
+      "slug": "bonjour",
+      "title": "Bonjour!",
+      "order": 2,
+      "isCore": true,
+      "difficulty": 1,
+      "cover": "/assets/images/lesson-bonjour.webp"
+    },
+    {
+      "id": "lesson-emotions",
+      "worldId": "world-moi",
+      "slug": "emotions",
+      "title": "Les emotions",
+      "order": 3,
+      "isCore": true,
+      "difficulty": 2,
+      "cover": "/assets/images/lesson-emotions.webp"
     }
   ],
   "scenes": [
@@ -33,6 +53,30 @@
         "/assets/lottie/mirror.json",
         "/assets/audio/intro-sprite.mp3"
       ]
+    },
+    {
+      "id": "scene-bonjour-culture",
+      "type": "culture-minute",
+      "lessonId": "lesson-bonjour",
+      "order": 1,
+      "hash": "sha256:601258b98654e656041e72b6dd52d3758773098e7919aec56c2a9f45b2eae141",
+      "assets": []
+    },
+    {
+      "id": "scene-bonjour-dialogue",
+      "type": "micro-dialogue",
+      "lessonId": "lesson-bonjour",
+      "order": 2,
+      "hash": "sha256:235dd004a8fcf7b69a104c82d58700385a87b5de3503873fb65c0b72d5d172ee",
+      "assets": []
+    },
+    {
+      "id": "scene-bonjour-echo",
+      "type": "echo-auditif",
+      "lessonId": "lesson-bonjour",
+      "order": 3,
+      "hash": "sha256:b9bd6599a25986c5a7d5daf36905223526595995185821568e7688824ab4c89b",
+      "assets": []
     }
   ],
   "assets": {

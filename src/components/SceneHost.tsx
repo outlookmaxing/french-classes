@@ -1,8 +1,11 @@
-import { ArrowLeft, Volume2, Lightbulb } from 'lucide-react';
+import { ArrowLeft } from 'lucide-react';
 import { TAnyScene } from '../schemas/scene';
 import { SceneImmersion } from './scenes/SceneImmersion';
 import { SceneVisualRecall } from './scenes/SceneVisualRecall';
 import { SceneAudioChoice } from './scenes/SceneAudioChoice';
+import { SceneEchoAuditif } from './scenes/SceneEchoAuditif';
+import { SceneMicroDialogue } from './scenes/SceneMicroDialogue';
+import { SceneCultureMinute } from './scenes/SceneCultureMinute';
 
 interface SceneHostProps {
   scene: TAnyScene;
@@ -37,6 +40,36 @@ export function SceneHost({ scene, onComplete, onBack, nextAssets = [] }: SceneH
     case 'audio-choice':
       return (
         <SceneAudioChoice
+          scene={scene}
+          onComplete={onComplete}
+          onBack={onBack}
+          nextAssets={nextAssets}
+        />
+      );
+
+    case 'echo-auditif':
+      return (
+        <SceneEchoAuditif
+          scene={scene}
+          onComplete={onComplete}
+          onBack={onBack}
+          nextAssets={nextAssets}
+        />
+      );
+
+    case 'micro-dialogue':
+      return (
+        <SceneMicroDialogue
+          scene={scene}
+          onComplete={onComplete}
+          onBack={onBack}
+          nextAssets={nextAssets}
+        />
+      );
+
+    case 'culture-minute':
+      return (
+        <SceneCultureMinute
           scene={scene}
           onComplete={onComplete}
           onBack={onBack}

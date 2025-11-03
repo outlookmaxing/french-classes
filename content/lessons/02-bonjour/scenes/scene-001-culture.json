@@ -1,0 +1,20 @@
+{
+  "id": "scene-bonjour-culture",
+  "type": "culture-minute",
+  "order": 1,
+  "lessonId": "lesson-bonjour",
+  "title": "L'histoire de «Bonjour»",
+  "word": "bonjour",
+  "etymology": "Du latin «bonus» (bon) + «diurnus» (du jour). Au 12e siecle, les Francais disaient simplement «bon» en se croisant. L'ajout de «jour» a rendu le salut plus chaleureux et personnel.",
+  "funFact": "Avant le 13e siecle, on disait juste «Bon!» aux gens dans la rue. Le «jour» a ete ajoute pour souhaiter litteralement une «bonne journee». Aujourd'hui, ne pas dire «bonjour» en entrant dans un magasin est considere comme impoli!",
+  "examples": [
+    {
+      "text": "Bonjour, comment allez-vous?",
+      "translation": "Здравствуйте, как дела?"
+    },
+    {
+      "text": "Bonjour Madame, un cafe s'il vous plait.",
+      "translation": "Здравствуйте, мадам, кофе, пожалуйста."
+    }
+  ]
+}

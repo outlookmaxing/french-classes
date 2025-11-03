@@ -1,0 +1,45 @@
+{
+  "id": "scene-bonjour-dialogue",
+  "type": "micro-dialogue",
+  "order": 2,
+  "lessonId": "lesson-bonjour",
+  "title": "Au cafe",
+  "situation": "Vous entrez dans un cafe parisien le matin. Le serveur vous accueille.",
+  "dialogue": [
+    {
+      "speaker": "serveur",
+      "text": "Bonjour! Installez-vous.",
+      "translation": "Здравствуйте! Присаживайтесь."
+    },
+    {
+      "speaker": "user",
+      "text": "Bonjour!",
+      "translation": "Здравствуйте!"
+    },
+    {
+      "speaker": "serveur",
+      "text": "Qu'est-ce que je vous sers?",
+      "translation": "Что вам принести?"
+    }
+  ],
+  "userPrompt": "Comment repondez-vous?",
+  "responses": [
+    {
+      "text": "Un cafe, s'il vous plait.",
+      "translation": "Кофе, пожалуйста.",
+      "correct": true
+    },
+    {
+      "text": "Je veux cafe.",
+      "translation": "Я хочу кофе.",
+      "correct": false,
+      "feedback": "En francais poli, on dit «Un cafe, s'il vous plait» ou «Je voudrais un cafe»."
+    },
+    {
+      "text": "Donne-moi un cafe.",
+      "translation": "Дай мне кофе.",
+      "correct": false,
+      "feedback": "C'est trop direct! On utilise «s'il vous plait» pour etre poli."
+    }
+  ]
+}

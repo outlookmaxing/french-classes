@@ -61,7 +61,7 @@ export function SceneVisualRecall({ scene, onComplete, onBack, nextAssets = [] }
         });
 
         // Save progress
-        const savePromise = saveSceneProgress({
+        saveSceneProgress({
           sceneId: scene.id,
           stars: correct ? 3 : 1
         }).catch(error => console.error('Failed to save progress:', error));
